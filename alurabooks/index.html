@@ -60,24 +60,41 @@
       <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide"><img src="img/ApacheKafka.svg" alt="Livro sobre apache Kafka e spring boot da AluraBooks"></div>
     <div class="swiper-slide"><img src="img/Javascript.svg" alt="Livro sobre JavaScript da AluraBooks"></div>
     <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre Portugol da AluraBooks"></div>
-    ...
+    <div class="swiper-slide"><img src="img/Tuning.svg" alt="Livro sobre Tuning da AluraBooks"></div>
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
+
+  
 </div>
+<div class="card">
+  <div class="card__descricao">
+  <div class="descricao">
+  </div>
+  </div>
+  </div>
     </section>   
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      pagination: {
+el: '.swiper-pagination',
+type: 'bullets',
+      },
+      });
+      </script>
   </body>
 </html>
